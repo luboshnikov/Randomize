@@ -13,6 +13,7 @@ public:
         int id = arr.size();
         arr.push_back(val);
         map[val] = id;
+        return true;
     }
     bool remove(int val){
         if(map.find(val) == map.end()){
@@ -23,6 +24,7 @@ public:
         arr[id] = arr.back();
         map[arr[id]] = id;
         arr.pop_back();
+        return true;
     }
     bool find(const int val){
         return map.find(val) != map.end();
@@ -36,3 +38,7 @@ private:
     vector<int> arr;
     unordered_map<int, int> map;
 };
+
+int main(){
+
+}
